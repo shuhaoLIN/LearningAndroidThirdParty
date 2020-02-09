@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--    toolbar-->
+    <include layout="@layout/titlebar" />
+    <!--    fragmentlayout-->
+    <FrameLayout
+        android:id="@+id/fragment_layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <!--    RadioGroup-->
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/rb_common_frame"
+            style="@style/rb_main_style"
+            android:drawableTop="@drawable/rb_common_frame_drawable_selector"
+            android:text="常用框架" />
+
+        <RadioButton
+            android:id="@+id/rb_third_part_frame"
+            style="@style/rb_main_style"
+            android:drawableTop="@drawable/rb_third_part_button_color_selecctor"
+            android:text="第三方" />
+
+        <RadioButton
+            android:id="@+id/rb_custom_frame"
+            style="@style/rb_main_style"
+            android:drawableTop="@drawable/rb_custom_frame_drawable_selector"
+            android:text="自定义控件" />
+
+        <RadioButton
+            android:id="@+id/rb_other_frame"
+            style="@style/rb_main_style"
+            android:drawableTop="@drawable/rb_other_frame_drawable_selector"
+            android:text="其他" />
+    </RadioGroup>
+</LinearLayout>
